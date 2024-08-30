@@ -1,0 +1,136 @@
+
+
+.nav_desktop{
+    display: none;
+    height: 300px;
+    width: 60px;
+    background-color: rgb(43, 56, 86);
+    position: sticky;
+    top: 40px;
+    left: 20px;
+    border-radius: 30px;
+}
+
+.nav_mobile{
+    background-color: rgb(74, 84, 107);
+    height: 60px;
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 30px;
+    position: sticky;
+    top: 12px;
+    max-width: 800px;
+    margin: 0 auto; /* Indica que siempre este al centro */
+    display: flex; /* Escrito asi solo, alinea todo */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(204, 178, 29);
+}
+
+.link:hover {
+    border-bottom: 4px solid rgb(204, 178, 29);
+}
+
+/* Desktop */
+@media screen and (min-width: 950px) {
+    .nav_mobile{
+        display: none;
+    }
+    .nav_desktop{
+        display: block;
+    }
+    body{
+        display: flex;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 950px) {
+    .card {
+        flex-direction: column;
+    }
+    .section{ 
+        width: 100%; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="nav_desktop">
+        </div>
+    <div class="nav_mobile">
+        <a class="link" href="#home">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+            </svg>
+        </a>
+        <a class="link" href="#background">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+            </svg>
+        </a>
+        <a class="link" href="#pages">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-briefcase" viewBox="0 0 16 16">
+                <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"/>
+            </svg>
+        </a>
+        <a class="link" href="#contact">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-chat-dots" viewBox="0 0 16 16">
+                <path d="M5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/>
+                <path d="m2.165 15.803.02-.004c1.83-.363 2.948-.842 3.468-1.105A9 9 0 0 0 8 15c4.418 0 8-3.134 8-7s-3.582-7-8-7-8 3.134-8 7c0 1.76.743 3.37 1.97 4.6a10.4 10.4 0 0 1-.524 2.318l-.003.011a11 11 0 0 1-.244.637c-.079.186.074.394.273.362a22 22 0 0 0 .693-.125m.8-3.108a1 1 0 0 0-.287-.801C1.618 10.83 1 9.468 1 8c0-3.192 3.004-6 7-6s7 2.808 7 6-3.004 6-7 6a8 8 0 0 1-2.088-.272 1 1 0 0 0-.711.074c-.387.196-1.24.57-2.634.893a11 11 0 0 0 .398-2"/>
+            </svg>
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    background-color: rgb(74, 84, 107);
+    height: 60px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 30px;
+    position: sticky;
+    top: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+    height: 300px;
+    width: 60px;
+    background-color: rgb(43, 56, 86);
+    position: sticky;
+    top: 40px;
+    left: 20px;
+    border-radius: 30px;
