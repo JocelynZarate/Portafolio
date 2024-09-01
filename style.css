@@ -2,16 +2,43 @@
 
 body {
     background-color: rgb(220, 220, 220);
-    padding: 12px 6px;
-    font-family: "IBM Plex Serif", serif;
-    font-weight: 300;
-    font-style: normal;
+    display: flex;
 }
 
 .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    display: flex;
+}
+
+/* NAV BAR */
+.navbar{
+    height: 300px;
+    width: 60px;
+    background-color: rgb(43, 56, 86);
+    position: sticky;
+    top: 40px;
+    margin-right: 25px;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.link {
+    text-decoration: none;
+    color: rgb(204, 178, 29);
+}
+
+.link:hover {
+    border-bottom: 4px solid rgb(204, 178, 29);
+}
+
+/* CONTENT */
+.content {
     max-width: 800px;
-    width: 100%;
-    margin: 0 auto;
 }
 
 .card {
@@ -40,10 +67,6 @@ body {
     width: 50%;
     padding: 5px 25px 25px 25px;
 }
-
-
-
-
 
 /* CARD 1 - LEFT */
 h1 {
@@ -87,10 +110,6 @@ h1 {
     border-radius: 12px;
     margin-left: 30px;
 }
-
-
-
-
 
 /* CARD 1 - RIGHT */
 .text-m {
@@ -137,12 +156,8 @@ h1 {
     margin-left: 40px;
 }
 
-
-
-
-
 /* HTML5, CSS3, JAVASCRIPT */
-.tech {
+.beandNames {
     height: 50px;
     width: 50px;
     border: 1px solid rgb(43, 56, 86);
@@ -154,10 +169,6 @@ h1 {
     display: flex;
     justify-content: space-around;
 }
-
-
-
-
 
 /* WORKS */
 .section_title {
@@ -173,14 +184,14 @@ h1 {
 
 .work_img {
     width: 80%;
-    margin-bottom: 50px;
+    /* margin-bottom: 10px; */
     border-radius: 15px;
     border: 1px solid rgb(184, 184, 184);
     opacity: 1;
 }
 
 .work_img:hover {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .names {
@@ -188,10 +199,6 @@ h1 {
     font-weight: 400;
     font-size: 22px;
 }
-
-
-
-
 
 /* CONTACT */
 .field {
@@ -209,7 +216,7 @@ h1 {
     min-width: 250px;
     line-height: 1.5;
     font-size: 14px;
-  }
+}
   
 input[type="submit"] {
     display: block;
@@ -224,76 +231,30 @@ input {
     font-family: "IBM Plex Serif", serif;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.nav{
-    height: 320px;
-    width: 60px;
-    background-color: rgb(43, 56, 86);
-    position: sticky;
-    top: 40px;
-    left: 20px;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+/* FOOTER */
+footer {
+    text-align: right;
 }
 
-.link {
-    text-decoration: none;
-    color: rgb(204, 178, 29);
-}
-
-.link:hover {
-    border-bottom: 4px solid rgb(204, 178, 29);
-}
-
-
-
-
-
-/* Desktop */
-@media screen and (min-width: 950px) {
-    body{
-        display: flex;
-    }
-}
-
-/* Mobile */
+/* MOBILE */
 @media screen and (max-width: 950px) {
-    .nav {
+    .container {
+        flex-direction: column;
+    }
+    .navbar {
         height: 60px;
         width: 100%;
-        margin-bottom: 12px;
-        top: 10px;
-        max-width: 800px;
-        margin: 0 auto;
-        display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
+        margin-bottom: 15px;
     }
     .card {
         flex-direction: column;
     }
     .section{ 
         width: 100%; 
+    }
+
+    .brands {
+        flex-direction: row;
     }
 }
