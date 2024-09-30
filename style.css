@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "IBM Plex Serif", serif;
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(164, 160, 160);
     display: flex;
 }
 
@@ -142,8 +146,8 @@ body {
 }
 
 /* BACKGROUND */
-.institutions:visited {
-    color: black
+.links {
+    color: black;
 }
 
 /* WORK */
@@ -171,15 +175,42 @@ body {
     height: 240px;
     border-radius: 10px;
     padding: 2px;
-}
 
-.work_img:hover {
-    opacity: 0.8 ;
+    view-timeline-name: --image;
+    view-timeline-axis: block;
+    animation-timeline: --image ;
+    animation-name: show;
+    animation-range: entry 25% cover 40%;
+    animation-fill-mode: both;
 }
 
 .work_name {
     font-size: 22px;
-    margin: 50px 20px;
+    margin: 50px 0;
+}
+
+.work_links {
+    text-decoration: none;
+    color: black;
+}
+
+.work_links:hover {
+    border: 2px solid  rgb(43, 56, 86);
+}
+
+.svg {
+    padding: 3px 8px;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+    to {
+        opacity: 1;
+        scale: 80%;
+    }
 }
 
 /* CONTACT */
@@ -211,6 +242,7 @@ input[type="submit"] {
     background-color: rgb(43, 56, 86);
     color: #fff;
     border-radius: 20px;
+    border: solid;
 }
 
 .send {
