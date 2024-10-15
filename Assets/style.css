@@ -6,7 +6,8 @@ html {
 
 body {
     font-family: "IBM Plex Serif", serif;
-    background-color: rgb(164, 160, 160);
+    background: url("./Media/Hojas.webp");
+    /* background-size: contain;  */
     display: flex;
 }
 
@@ -47,12 +48,29 @@ body {
 }
 
 .card {
-    background-color: white;
+    background-color: rgb(238, 245, 243);
     display: flex;
     padding: 20px 50px ;
     border-radius: 10px;
     margin-top: 2px;
+    opacity: 0;
+    animation: slide-up 0.8s forwards;
 }
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.3s; }
+.card:nth-child(3) { animation-delay: 0.5s; }
 
 .section {
     width: 50%;
@@ -61,7 +79,7 @@ body {
 
 /* CARD 1 - LEFT */
 .status {
-    border: 1px solid rgb(217, 214, 214);
+    border: 1px solid #a5a4a4;
     border-radius: 20px;
     display: flex;
     justify-content: center;
@@ -108,7 +126,7 @@ body {
 }
 
 .btn1:hover {
-    background-color: #fff;
+    background-color: rgb(238, 245, 243);
     color: black;
     cursor: pointer;
 }
@@ -118,7 +136,7 @@ body {
     border: 1px solid rgb(43, 56, 86);
     padding: 20px;
     border-radius: 30px;
-    background-color: #fff;
+    background-color: rgb(238, 245, 243);
 }
 
 .btn2:hover {
@@ -152,18 +170,18 @@ body {
 
 /* WORK */
 .cardsm {
-    background-color: white;
+    background-color: rgb(238, 245, 243);
     display: flex;
     padding: 0 50px ;
     border-radius: 10px;
-    margin-top: 40px;
+    margin-top: 30px;
     margin-bottom: 2px;
     align-items: center;
     justify-content: space-between;
 }
 
 .cardmd {
-    background-color: white;
+    background-color: rgb(238, 245, 243);
     display: flex;
     border-radius: 10px;
     margin: 2px 0;
@@ -171,17 +189,10 @@ body {
 }
 
 .work_img {
-    width: 500px;
-    height: 240px;
+    width: 400px;
+    height: 192px;
+    margin: 25px 50px;
     border-radius: 10px;
-    padding: 2px;
-
-    view-timeline-name: --image;
-    view-timeline-axis: block;
-    animation-timeline: --image ;
-    animation-name: show;
-    animation-range: entry 25% cover 40%;
-    animation-fill-mode: both;
 }
 
 .work_name {
@@ -202,23 +213,43 @@ body {
     padding: 3px 8px;
 }
 
-@keyframes show {
-    from {
-        opacity: 0;
-        scale: 25%;
-    }
-    to {
-        opacity: 1;
-        scale: 80%;
-    }
+
+
+
+
+
+
+
+
+
+
+/* SERVICES */
+.card_serv {
+    background-color: rgb(243, 249, 247);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px ;
+    margin: 2px 0 2px;
+    border-radius: 10px;
 }
+
+
+
+
+
+
+
+
+
 
 /* CONTACT */
 .user_info {
+    background-color: rgb(243, 249, 247);
     width: 328px;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #a5a4a4;
 }
 
 .user {
@@ -228,11 +259,12 @@ body {
 }
 
 textarea {
+    background-color: rgb(243, 249, 247);
     width: 680px;
     resize: none; 
     padding: 10px 10px 130px;
     border-radius: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #a5a4a4;
 }
   
 input[type="submit"] {
@@ -250,20 +282,17 @@ input[type="submit"] {
     justify-content: flex-end;
 }
 
+/* SOCIAL MEDIA */
+.media_link {
+    text-decoration: none;
+    color: rgb(43, 56, 86);
+    margin: 5px;
+}
+
 /* FOOTER */
 footer {
     text-align: right;
 }
-
-
-
-
-
-/* SERVICES */
-
-
-
-
 
 /* MOBILE AND TABLET */
 @media screen and (max-width: 1200px) {
